@@ -93,7 +93,13 @@
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
-          }
+              $('#contact :input').attr('disabled', 'disabled');
+                        $('#contact').fadeTo("slow", 1, function () {
+                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find('label').css('cursor', 'default');
+                            $('#success').fadeIn();
+                        });
+          };
           return;
       };
       // url encode form data for sending as post data
@@ -107,10 +113,14 @@
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
-    var forms = document.querySelectorAll("form.gform");
+    /*var forms = document.querySelectorAll("form.contact-bg");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
-    }
+    }*/
+      var formm = document.getElementsByClassName("contact-bg");
+      console.log(formm);
+      formm[0].addEventListener("submit",handleFormSubmit,false);
+      console.log(formm);
   };
   document.addEventListener("DOMContentLoaded", loaded, false);
 

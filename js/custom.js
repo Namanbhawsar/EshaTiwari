@@ -116,6 +116,11 @@ $(document).ready(function () {
                     required: true,
                     minlength: 2
                 },
+                mobile: {
+                    required: true,
+                    minlength:10,
+                    maxlength:10
+                },
                 email: {
                     required: true
                 },
@@ -131,6 +136,10 @@ $(document).ready(function () {
                 name: {
                     required: "This field is required",
                     minlength: "your name must consist of at least 2 characters"
+                },
+                 mobile:{
+                    required:"This field is required",
+                    minlength:"Number must Consist of 10 characters"
                 },
                 email: {
                     required: "This field is required"
