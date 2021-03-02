@@ -749,7 +749,22 @@ fieldset {
     letter-spacing: 2px;
     font-weight: bold;
     width: 100%;
+    transition: font-size .2s, background-color .2s;
 }
+
+#submit:hover {
+    background-color: #394c8e;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 110%;
+    width: 100%;
+}
+
+
 
 .social {
     padding-left: 0;
